@@ -1,0 +1,34 @@
+#
+# SPDX-FileCopyrightText: 2026 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+# Partitions
+BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
+BOARD_CACHEIMAGE_PARTITION_SIZE := 419430400
+BOARD_DTBOIMG_PARTITION_SIZE := 10485760
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 82792448
+BOARD_SUPER_PARTITION_SIZE := 8023703552
+
+TARGET_IS_WIFI-ONLY := true
+
+# Inherit from sm8150-common
+include device/samsung/sm8150-common/BoardConfigCommon.mk
+
+DEVICE_PATH := device/samsung/gts6lwifi
+
+# Display
+TARGET_SCREEN_DENSITY := 360
+
+# Kernel
+TARGET_KERNEL_CONFIG := gts6lwifi_eur_open_defconfig
+
+# Properties
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+
+# Recovery
+TARGET_RECOVERY_DEFAULT_ROTATION := ROTATION_RIGHT
+TARGET_RECOVERY_DEFAULT_TOUCH_ROTATION := ROTATION_RIGHT
+
+# VINTF
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/vintf/manifest.xml

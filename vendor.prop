@@ -1,0 +1,13 @@
+# Audio
+aaudio.mmap_policy=1
+aaudio.mmap_exclusive_policy=1
+ro.audio.monitorRotation=true
+
+# Bluetooth
+bluetooth.device.default_name=Galaxy Tab S6
+
+# Fingerprint
+ro.vendor.fingerprint.type=optical
+
+# Radio
+ro.carrier=wifi-only
